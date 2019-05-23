@@ -1,0 +1,25 @@
+spring:
+  security:
+    user:
+      name: user
+      password: 1234
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+    show-sql: true
+  datasource:
+    activiti:
+       url: jdbc:mysql://localhost:3308/activiti?nullCatalogMeansCurrent=true&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false
+       username: root
+       password: XXaqss1314
+       driverClassName: com.mysql.jdbc.Driver
+       type: com.alibaba.druid.pool.DruidDataSource
+       check-process-definitions: false
+server:
+  port: 8081
+mybatis:
+    mapperLocations: classpath:mapper/*.xml
+    typeAliasesPackage: com.example.demo.model
+
